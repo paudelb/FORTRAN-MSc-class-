@@ -1,0 +1,17 @@
+#!/bin/tcsh -f 
+
+set nmeas  = 2100000
+set Ls     = (5 10 20 60 80)
+set beta   = 0.4407
+set tmax = 2000
+foreach L ($Ls)
+ set N     = `awk -v L=$L 'BEGIN{print L*L}'`
+ set rand  = `perl -e 'srand();print int(3000000*rand())+1;'`
+ set out   = outL${L}b${beta}
+ echo "Running L${L}b${beta}"
+ ./is -L $L -b $beta -s 1 -S $rand -n $nmeas > $out
+ echo "Autocorrelations L${L}b${beta}"
+ grep -v '#' $out | \
+  awk -v N=$N 'NR>100000{print ($2>0)?($2/N):(-$2/N)}'|\
+  autoc -t $tmax  > $out.rhom 
+end

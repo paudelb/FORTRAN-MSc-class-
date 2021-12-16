@@ -1,0 +1,10 @@
+ number           1 	square of the number           1
+ number           2 	square of the number           4
+ number           3 	square of the number           9
+ number           4 	square of the number          16
+ number           5 	square of the number          25
+ number           6 	square of the number          36
+ number           7 	square of the number          49
+ number           8 	square of the number          64
+ number           9 	square of the number          81
+ number          10 	square of the number         100

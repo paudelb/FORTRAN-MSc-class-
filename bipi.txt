@@ -1,0 +1,6 @@
+We intend to find the roots of the quadratic equation of the form a*x**2+b*x+c=0.
+ Give the value of coefficient a,b,c:
+ the values  of a, b , c given are    1.00000000       2.00000000       3.00000000    
+ This equation has complex roots
+ root1=  -1.00000000      + i   1.41421354    
+ root2=  -1.00000000      - i   1.41421354    
